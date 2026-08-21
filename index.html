@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<meta charset="UTF-8" />
+		<title>Deadlines</title>
+	</head>
+	<body>
+		<h1>Список дедлайнов</h1>
+
+		<!-- Форма добавления нового дедлайна -->
+		<form id="addForm">
+			<input type="text" id="title" placeholder="Название" required />
+			<input type="text" id="subject" placeholder="Предмет" required />
+			<input type="date" id="due_date" required />
+			<select id="status">
+				<option value="в процессе">в процессе</option>
+				<option value="сдан">сдан</option>
+				<option value="отменён">отменён</option>
+			</select>
+			<button type="submit">Добавить</button>
+		</form>
+		<h2>Фильтры</h2>
+		<label>
+			Статус:
+			<select id="filterStatus">
+				<option value="">Все</option>
+				<option value="в процессе">в процессе</option>
+				<option value="сдан">сдан</option>
+				<option value="отменён">отменён</option>
+			</select>
+		</label>
+
+		<label>
+			Предмет:
+			<input type="text" id="filterSubject" placeholder="Введите предмет" />
+		</label>
+
+		<button id="applyFilters">Применить</button>
+		<!-- Таблица для отображения дедлайнов -->
+		<table border="1" id="deadlineTable">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Название</th>
+					<th>Предмет</th>
+					<th>Дата</th>
+					<th>Статус</th>
+					<th>Действия</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Здесь будут строки дедлайнов -->
+			</tbody>
+		</table>
+
+		<script src="script.js"></script>
+	</body>
+</html>

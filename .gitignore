@@ -1,0 +1,17 @@
+server
+deadlines.json
+.DS_Store
+.idea/
+deadlines-api
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+id_ed25519
+id_ed25519.pub
+known_hosts
+*.dump
+*.sql
+restore.log
+backups/

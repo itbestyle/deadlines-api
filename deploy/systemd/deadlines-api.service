@@ -1,0 +1,21 @@
+[Unit]
+Description=Deadlines API (Go)
+After=network.target
+
+[Service]
+Type=simple
+User=deadlines
+Group=deadlines
+WorkingDirectory=/opt/deadlines-api
+EnvironmentFile=/opt/deadlines-api/.env
+ExecStart=/opt/deadlines-api/server
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
